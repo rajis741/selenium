@@ -223,6 +223,46 @@ module Selenium
           expect { logger.deprecate('#old', '#new') }.to output(/new/).to_stdout_from_any_process
         end
       end
+
+      describe 'matchers' do
+        after { logger.level = :info }
+
+        it 'matches logging type with multiple items logged' do
+          expect {
+            logger.deprecate('something', id: :foo)
+            logger.warn('another thing', id: :bar)
+          }.not_to have_warned(:foo, logger)
+        end
+
+        it 'does not match multiple ids with single id of that type logged' do
+          expect {
+            logger.deprecate('something', id: :foo)
+          }.not_to have_deprecated(%i[foo bar], logger)
+        end
+
+        it 'does not match multiple ids when not all are the given type' do
+          expect {
+            logger.deprecate('something', id: :foo)
+            logger.info('something else', id: :bar)
+          }.not_to have_informed(%i[foo bar], logger)
+        end
+
+        it 'matches single id when multiple ids of that type logged' do
+          logger.level = :debug
+
+          expect {
+            logger.debug('something', id: :foo)
+            logger.debug('something else', id: :bar)
+          }.to have_debugged(:foo, logger)
+        end
+
+        it 'matches multiple ids of given type when all ids of that type are logged' do
+          expect {
+            logger.error('something', id: :foo)
+            logger.error('something else', id: :bar)
+          }.to have_errored(%i[foo bar], logger)
+        end
+      end
     end
   end # WebDriver
 end # Selenium

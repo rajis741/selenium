@@ -22,8 +22,8 @@ require 'time'
 require 'rspec'
 
 require 'selenium-webdriver'
+require 'selenium/webdriver/common/logger_matchers'
 require_relative 'spec_support'
-require_relative '../../../rspec_matchers'
 
 include Selenium # rubocop:disable Style/MixinUsage
 

@@ -37,6 +37,7 @@ module Selenium
       extend Forwardable
 
       def_delegators :@logger,
+                     :progname,
                      :close,
                      :debug?,
                      :info?,

@@ -32,7 +32,7 @@ require 'webmock/rspec'
 require 'selenium-webdriver'
 require 'securerandom'
 require 'pathname'
-require_relative '../../../rspec_matchers'
+require 'selenium/webdriver/common/logger_matchers'
 
 module Selenium
   module WebDriver
@@ -52,6 +52,9 @@ RSpec.configure do |c|
     meta[:aggregate_failures] = true
   end
   Selenium::WebDriver.logger(ignored: :logger_info)
+
+  root = Pathname.new('../../../../../../').realpath(__FILE__)
+  $LOAD_PATH.insert(0, root.join('bazel-bin/rb/lib').to_s) if File.exist?(root.join('bazel-bin/rb/lib'))
 
   c.include Selenium::WebDriver::UnitSpecHelper
 

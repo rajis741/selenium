@@ -234,7 +234,7 @@ module Selenium
 
             expect {
               options.as_json
-            }.to have_warning(:w3c_options)
+            }.to have_warned(:w3c_options)
           end
 
           it 'returns added options' do
