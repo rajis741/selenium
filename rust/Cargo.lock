@@ -1303,7 +1303,7 @@ dependencies = [
 
 [[package]]
 name = "selenium-manager"
-version = "1.0.0-M3"
+version = "1.0.0-M4"
 dependencies = [
  "assert_cmd",
  "clap",
