@@ -512,7 +512,7 @@ pub trait SeleniumManager {
                 .unwrap()
                 .to_string()
                 .replace("\\\\?\\", "")
-                .replace("\\", "\\\\");
+                .replace('\\', "\\\\");
         }
         browser_path
     }
