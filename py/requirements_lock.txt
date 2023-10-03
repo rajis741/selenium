@@ -334,3 +334,4 @@ zipp==3.8.0 \
     # via
     #   -r py/requirements.txt
     #   importlib-metadata
+urllib3>=2.0.6 # not directly required, pinned by Snyk to avoid a vulnerability
