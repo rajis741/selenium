@@ -19,7 +19,7 @@ attrs==21.4.0 \
     #   outcome
     #   pytest
     #   trio
-certifi==2022.12.07 \
+certifi==2023.7.22 \
     --hash=sha256:35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3 \
     --hash=sha256:4ad3232f5e926d6718ec31cfc1fcadfde020920e278684144551c91769c7bc18
     # via -r py/requirements.txt
@@ -77,7 +77,7 @@ cffi==1.15.0 \
     # via
     #   -r py/requirements.txt
     #   cryptography
-cryptography==41.0.0 \
+cryptography==42.0.4 \
     --hash=sha256:0ddaee209d1cf1f180f1efa338a68c4621154de0afaef92b89486f5f96047c55 \
     --hash=sha256:14754bcdae909d66ff24b7b5f166d69340ccc6cb15731670435efd5719294895 \
     --hash=sha256:344c6de9f8bda3c425b3a41b319522ba3208551b70c2ae00099c205f0d9fd3be \
@@ -318,7 +318,7 @@ trio-websocket==0.9.2 \
     --hash=sha256:5b558f6e83cc20a37c3b61202476c5295d1addf57bd65543364e0337e37ed2bc \
     --hash=sha256:a3d34de8fac26023eee701ed1e7bf4da9a8326b61a62934ec9e53b64970fd8fe
     # via -r py/requirements.txt
-urllib3[socks]==2.0.2 \
+urllib3==2.0.7 \
     --hash=sha256:61717a1095d7e155cdb737ac7bb2f4324a858a1e2e6466f6d03ff630ca68d3cc \
     --hash=sha256:d055c2f9d38dc53c808f6fdc8eab7360b6fdbbde02340ed25cfbcd817c62469e
     # via -r py/requirements.txt
