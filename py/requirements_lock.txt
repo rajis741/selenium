@@ -250,7 +250,7 @@ pycparser==2.21 \
     # via
     #   -r py/requirements.txt
     #   cffi
-pyopenssl==22.0.0 \
+pyopenssl==24.0.0 \
     --hash=sha256:660b1b1425aac4a1bea1d94168a85d99f0b3144c869dd4390d27629d0087f1bf \
     --hash=sha256:ea252b38c87425b64116f808355e8da644ef9b07e429398bfece610f893ee2e0
     # via -r py/requirements.txt
